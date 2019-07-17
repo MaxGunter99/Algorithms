@@ -23,11 +23,10 @@ def knapsack_solver(items, capacity):
   while i < len( items ):
     for x in items:
 
-      if x[1]:
-        new_s = x[1] + s
+      x[1] + s
         
       i += 1
-  print(new_s)
+  print(s)
   return s
   
 
