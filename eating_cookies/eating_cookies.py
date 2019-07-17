@@ -5,25 +5,35 @@ import sys
 # a solution that is more efficient than the naive 
 # recursive solution
 
-def eating_cookies(n, cache = None):
+# SETUP CACHE
+cache = {}
 
+def eating_cookies(n, cache = {} ):
+
+  # Zero Base Index
+
+  # COOKIE 1
   if n == 0:
     return 1
 
-  # COOKIE 1
+  # COOKIE 2
   if n == 1:
     return 1
 
-  # COOKIE 2
+  # COOKIE 3
   elif n == 2:
     return 2
 
-  # COOKIE 3
-  elif n == 3:
-    return 3
+  # COOKIE IN CACHE MAKES PROGRESS FASTER!
+  elif n in cache:
+    return cache[ n ]
 
+  # VALUES => FIBONACCI SEQUENCE
   else:
     value = eating_cookies( n - 1 ) + eating_cookies( n - 2 ) + eating_cookies( n - 3 )
+
+    # CACHE VALUES
+    cache[ n ] = value
     print( value )
     return value
 
