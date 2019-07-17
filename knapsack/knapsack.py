@@ -3,10 +3,32 @@
 import sys
 from collections import namedtuple
 
+# LAYOUT FROM MATRIX
 Item = namedtuple('Item', ['index', 'size', 'value'])
 
 def knapsack_solver(items, capacity):
-  pass
+
+  print( items )
+  # print( len( items) )
+
+  # INDEX [0]
+  i = 0
+
+  # SIZE [1]
+  s = 0
+
+  # VALUE [2]
+  v = 0
+
+  while i < len( items ):
+    for x in items:
+
+      if x[1]:
+        new_s = x[1] + s
+        
+      i += 1
+  print(new_s)
+  return s
   
 
 if __name__ == '__main__':
@@ -26,3 +48,4 @@ if __name__ == '__main__':
     print('Usage: knapsack.py [filename] [capacity]')
 
 # TEST WITH | python3 test_knapsack.py |
+# TEST INDIVISUALLY | python3 test_knapsack.py -k small |
