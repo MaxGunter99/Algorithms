@@ -7,8 +7,8 @@ def find_max_profit(prices):
   max_profit = 0
   buy = 0
   sell = 0
-  sell = sell + max( prices )
-  buy = buy + min( prices )
+  sell = sell + min( prices )
+  buy = buy + max( prices )
   max_profit = sell - buy
   print( max_profit )
   return max_profit
