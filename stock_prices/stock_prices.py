@@ -3,7 +3,17 @@
 import argparse
 
 def find_max_profit(prices):
-  pass
+  print( prices )
+  max_profit = 0
+  buy = 0
+  sell = 0
+  sell = sell + max( prices )
+  buy = buy + min( prices )
+  max_profit = sell - buy
+  print( max_profit )
+  return max_profit
+    
+
 
 
 if __name__ == '__main__':
@@ -13,3 +23,5 @@ if __name__ == '__main__':
   args = parser.parse_args()
 
   print("A profit of ${profit} can be made from the stock prices {prices}.".format(profit=find_max_profit(args.integers), prices=args.integers))
+
+# TEST WITH | python3 test_stock_prices.py |

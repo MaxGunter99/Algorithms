@@ -8,7 +8,7 @@ Item = namedtuple('Item', ['index', 'size', 'value'])
 
 def knapsack_solver(items, capacity):
 
-  print( items )
+  # print( items )
   # print( len( items) )
 
   # INDEX [0]
@@ -22,12 +22,19 @@ def knapsack_solver(items, capacity):
 
   while i < len( items ):
     for x in items:
+      three_items = 0
+      if three_items <= 3:
+        print( x[0] , x[1] , x[2] )
+        v = v + x[2]
+        s = s + x[1]
+        three_items += 1
+        print( "Total Size:", s , "\n" , "Total Value:" , v )
+        if three_items == 3:
+          three_items = 0
+        return s , v
 
-      x[1] + s
-        
-      i += 1
-  print(s)
-  return s
+      # return its
+  return s , v
   
 
 if __name__ == '__main__':

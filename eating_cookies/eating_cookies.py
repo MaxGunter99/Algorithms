@@ -31,7 +31,6 @@ def eating_cookies(n, cache = {} ):
   # VALUES => FIBONACCI SEQUENCE
   else:
     value = eating_cookies( n - 1 ) + eating_cookies( n - 2 ) + eating_cookies( n - 3 )
-
     # CACHE VALUES
     cache[ n ] = value
     print( value )
