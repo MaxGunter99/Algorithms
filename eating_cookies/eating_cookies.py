@@ -25,15 +25,17 @@ def eating_cookies(n, cache = {} ):
     return 2
 
   # COOKIE IN CACHE MAKES PROGRESS FASTER!
+  
   elif n in cache:
     return cache[ n ]
 
   # VALUES => FIBONACCI SEQUENCE
   else:
+
     value = eating_cookies( n - 1 ) + eating_cookies( n - 2 ) + eating_cookies( n - 3 )
+
     # CACHE VALUES
     cache[ n ] = value
-    print( value )
     return value
 
 if __name__ == "__main__":

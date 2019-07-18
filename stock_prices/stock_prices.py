@@ -3,15 +3,36 @@
 import argparse
 
 def find_max_profit(prices):
-  print( prices )
-  max_profit = 0
-  buy = 0
-  sell = 0
-  sell = sell + min( prices )
-  buy = buy + max( prices )
-  max_profit = sell - buy
-  print( max_profit )
+
+  print(  "Prices" , prices )
+
+  max_profit = None
+
+  for i in range( len( prices ) - 1 ):
+
+    for x in range( i + 1 , len(prices ) ):
+      # print( x )
+      difference = prices[x] - prices[i]
+
+      if not max_profit:
+        max_profit = difference
+
+      elif max_profit < difference:
+        max_profit = difference
+
   return max_profit
+
+  # max_profit = 0
+  # buy = 0
+  # sell = 0
+  # biggest_sell = sell + max( prices )
+  # print( biggest_sell )
+  # smallest_buy = buy + min( prices )
+  # print( smallest_buy )
+  # profit =  biggest_sell - smallest_buy
+  # max_profit.append(profit)
+
+  # return profit
     
 
 
