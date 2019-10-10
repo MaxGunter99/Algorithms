@@ -37,6 +37,7 @@ def find_max_profit(prices):
 
 
   print( max_ammout_you_can_earn )
+  return max_ammout_you_can_earn
     
     
 # return prices
@@ -45,7 +46,7 @@ def find_max_profit(prices):
 # find_max_profit( [10, 7, 5, 8, 11, 9] ) # returns 6
 # find_max_profit( [100, 90, 80, 50, 20, 10] ) # returns - 10
 # find_max_profit( [1050, 270, 1540, 3800, 2] ) # returns 3530
-find_max_profit( [100, 55, 4, 98, 10, 18, 90, 95, 43, 11, 47, 67, 89, 42, 49, 79] ) # returns 94
+# find_max_profit( [100, 55, 4, 98, 10, 18, 90, 95, 43, 11, 47, 67, 89, 42, 49, 79] ) # returns 94
 
 
 if __name__ == '__main__':
