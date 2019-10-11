@@ -2,6 +2,7 @@
 import os
 import math
 os.system( 'clear' )
+
 def recipe_batches(recipe, ingredients):
   recipename = list( recipe.keys() )
   recipequantity = list( recipe.values() )

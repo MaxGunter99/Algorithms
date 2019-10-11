@@ -20,8 +20,6 @@ def find_max_profit(prices):
 
     for x in section:
 
-      # print( x - prices[i] )
-
       compared = x - prices[i]
 
       if compared == 0:
